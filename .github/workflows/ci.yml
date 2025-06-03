@@ -11,17 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-    - name: Install dependencies
-      run: npm install
-      working-directory: my-ci-cd-app
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run tests
-      run: npm test
-      working-directory: my-ci-cd-app
+      - name: Run tests
+        run: npm test
